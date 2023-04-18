@@ -1,0 +1,63 @@
+.story {
+    &__img {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+        margin-bottom: 15px;
+
+        @include mxw($sm) {
+            height: 500px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include mxw($sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mxw($lg) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+        @include mxw($sm) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        height: 778px;
+
+        @include mxw($sm) {
+            height: 450px;
+        }
+
+        @include mxw($xs) {
+            height: 250px;
+        }
+    }
+
+    &__small-photo{
+        @include mxw($sm) {
+            height: 350px;
+            margin-bottom: 0;
+        }
+    }
+}

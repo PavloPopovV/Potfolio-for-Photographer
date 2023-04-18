@@ -1,0 +1,29 @@
+.category {
+    &__title-name {
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+        font-size: 24px;
+        line-height: 31px;
+        color: $accent;
+        position: absolute;
+        transform: translateX(-50px);
+
+        @include mxw($lg) {
+            transform: translateX(0);
+        }
+
+        @include mxw($sm) {
+            display: block;
+            writing-mode: horizontal-tb;
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @include mxw($sm) {
+
+            margin-bottom: 0;
+
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.portfolio {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 30px;
+
+        @include mxw($lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mxw($md) {
+            grid-template-columns: repeat(1, 1fr);
+            place-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__name {
+        text-align: center;
+    }
+}

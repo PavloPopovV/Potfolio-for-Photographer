@@ -1,0 +1,74 @@
+.header {
+    padding: 26px 0 65px;
+    display: flex;
+    justify-content: center;
+
+    @include mxw($sm) {
+        padding: 25px 0 30px;
+    }
+
+    &__logo {
+        width: 210px;
+        height: 60px;
+        margin: 0 auto 25px;
+
+        @include mxw($sm) {
+            width: 190px;
+            margin: 0 auto 15px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 30px;
+        padding-right: 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            right: 0;
+            top: 10px;
+            border-radius: 50%;
+            border: 0.6px solid $text;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        @include mxw($lg) {
+            margin-right: 15px;
+            padding-right: 15px;
+        }
+
+        @include mxw($sm) {
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 18px;
+
+        @include mxw($xs) {
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}

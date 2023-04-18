@@ -1,0 +1,125 @@
+body,
+html {
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    font-family: 'TT Drugs';
+    font-style: normal;
+    color: $text;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.location {
+    display: block;
+    position: relative;
+    padding-left: 10px;
+    font-size: 11px;
+    line-height: 14px;
+    color: $location;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 3px;
+        left: 0;
+        background-image: url('../images/sprite.svg#location');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mxw($lg) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.item-card {
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    @include mxw($lg) {
+        margin-bottom: 20px;
+    }
+
+    @include mxw($xs) {
+        margin-bottom: 15px;
+    }
+}
+
+.big-card,
+.small-card {
+    margin-bottom: 15px;
+}
+
+.big-card {
+    width: 570px;
+    height: 794px;
+
+    @include mxw($xs) {
+        height: 494px;
+        margin-bottom: 10px;
+    }
+}
+
+.small-card {
+    width: 370px;
+    height: 516px;
+
+    @include mxw($lg) {
+        width: 570px;
+        height: 794px;
+    }
+
+    @include mxw($xs) {
+        height: 500px;
+        margin-bottom: 10px;
+    }
+}
+
+.big-name,
+.small-name {
+    display: block;
+    text-transform: uppercase;
+}
+
+.big-name {
+    font-size: 24px;
+    line-height: 32px;
+
+    @include mxw($xs) {
+        font-size: 14px;
+        line-height: 10px;
+    }
+}
+
+.small-name {
+    font-size: 18px;
+    line-height: 24px;
+
+    @include mxw($xs) {
+        font-size: 14px;
+        line-height: 10px;
+    }
+}

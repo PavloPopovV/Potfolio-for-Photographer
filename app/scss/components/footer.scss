@@ -1,0 +1,99 @@
+.footer {
+    border-top: 1px solid $text;
+    padding: 25px 0 35px;
+    // flex: 0 0 auto;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        @include mxw($lg) {
+            justify-content: center;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        @include mxw($lg) {
+            display: none;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 60px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            right: -30px;
+            top: 10px;
+            border-radius: 50%;
+            border: 0.6px solid $text;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2) {
+            margin-right: 100px;
+            @include mxw($lg) {
+                margin-right: 0;
+            }
+            @include mxw($xs) {
+                font-size: 14px;
+                line-height: 10px;
+            }
+        }
+    }
+
+    &__icons {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $text;
+        margin-right: 50px;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 7px;
+            left: 7px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &--instagram::after {
+            background-image: url('../images/sprite.svg#instagram');
+        }
+
+        &--facebook::after {
+            background-image: url('../images/sprite.svg#facebook');
+        }
+    }
+}
